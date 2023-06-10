@@ -1,21 +1,21 @@
 import { upcomingMovieGenreRequest } from "./fetch";
 
-let genres = {};
+// let genres = {};
 
-upcomingMovieGenreRequest()
-    .then(data => {
-        data.forEach(genre => {
-            genres[genre.id] = genre.name;
-        })
-    })
-    .catch(err => {
-        console.log(err);
-    });
+// upcomingMovieGenreRequest()
+//     .then(data => {
+//         data.forEach(genre => {
+//             genres[genre.id] = genre.name;
+//         })
+//     })
+//     .catch(err => {
+//         console.log(err);
+//     });
 
-    console.log(genres);
+//     console.log(genres);
 
 
-export function createUpcomingMarkup(arr) {
+export function createUpcomingMarkup(arr, genres) {
     const { release_date, vote_average, vote_count, backdrop_path, genre_ids, overview, title, popularity } = arr;
     const genreNames = genre_ids.map(id => genres[id]);
     console.log(genreNames);
