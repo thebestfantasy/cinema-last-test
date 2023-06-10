@@ -7,12 +7,124 @@ body {
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #fafafa;
+  background-color: rgb(14, 94, 120);
   color: #212121;
   line-height: 1.5;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 img {
   display: block;
   max-width: 100%;
+}
+
+.month {
+  max-width: 320px;
+  height: 1097px;
+  margin-top: 32px;
+}
+
+.month-trend-title {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-transform: uppercase;
+}
+
+.month-picture {
+  width: 280px;
+  height: 402px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.upcom-about-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.upcom-movie-title {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.15;
+  margin-left: 2px;
+  margin-top: 24px;
+  margin-bottom: 20px;
+
+  color: #ffffff;
+}
+
+.upcom-movie-subtitle {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+
+  color: #b7b7b7;
+}
+
+.upcoming-box {
+  display: flex;
+  /* flex-wrap: wrap; */
+  /* align-content: space-between; */
+  margin: auto;
+}
+
+.upcom-about-box {
+  display: block;
+}
+
+.upcom-about-box-api {
+  display: block;
+  margin-left: 57px;
+}
+
+.upcom-release-date {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+
+  color: #f87719;
+}
+
+.upcom-vote {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+
+  color: #111111;
+}
+
+.upcom-popularity {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+
+  color: #ffffff;
+}
+
+.upcom-genre {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+
+  color: #ffffff;
+}
+
+.upcom-movie-about {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.43;
+
+  color: #f8f8f8;
 }
