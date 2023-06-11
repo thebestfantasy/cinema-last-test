@@ -20,7 +20,7 @@ const upcomingBox = document.querySelector(".upcom-js-list");
 //         );
 //     });
 
-async function init() {
+async function initUpcomingFetch() {
   try {
     let genres = {};
     const data = await upcomingMovieRequest();
@@ -39,5 +39,5 @@ async function init() {
   }
 }
 
-init();
+initUpcomingFetch();
 

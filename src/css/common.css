@@ -7,11 +7,9 @@ body {
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(14, 94, 120);
+  background-color: rgb(0, 0, 1);
   color: #212121;
   line-height: 1.5;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
 img {
@@ -21,8 +19,60 @@ img {
 
 .month {
   max-width: 320px;
-  height: 1097px;
-  margin-top: 32px;
+  padding-top: 32px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .month {
+    max-width: 768px;
+    padding-top: 44px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .month {
+    max-width: 1280px;
+    padding-top: 60px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .upcoming-container {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .upcoming-container-about {
+    display: block;
+    margin-left: 16px;
+  }
+}
+
+.upcom-img {
+  width: 280px;
+  height: 402px;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .upcom-img {
+    width: 704px;
+    height: 400px;
+    object-fit: cover;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .upcom-img {
+    width: 805px;
+    height: 458px;
+    object-fit: cover;
+  }
 }
 
 .month-trend-title {
@@ -31,13 +81,17 @@ img {
   font-size: 16px;
   line-height: 1.19;
   text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 24px;
+
+  color: #ffffff;
 }
 
-.month-picture {
-  width: 280px;
-  height: 402px;
-  margin-right: auto;
-  margin-left: auto;
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .month-trend-title {
+    font-size: 28px;
+    line-height: 1.18;
+  }
 }
 
 .upcom-about-box {
@@ -47,32 +101,80 @@ img {
 
 .upcom-movie-title {
   font-family: 'Roboto';
-  font-style: normal;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.15;
-  margin-left: 2px;
   margin-top: 24px;
   margin-bottom: 20px;
 
   color: #ffffff;
 }
 
+@media screen and (min-width: 1280px) {
+  .upcom-movie-title {
+    margin-top: 0;
+    margin-bottom: 28px;
+    font-size: 32px;
+    line-height: 1.19;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .upcom-movie-title {
+    font-size: 28px;
+    line-height: 1.18;
+    margin-top: 32px;
+    margin-bottom: 24px;
+  }
+}
+
 .upcom-movie-subtitle {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  margin-top: 0;
+  margin-bottom: 12px;
+
+  color: #b7b7b7;
+}
+
+.upcom-movie-about-title {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
+  margin-top: 8px;
+  margin-bottom: 0;
 
   color: #b7b7b7;
 }
 
-.upcoming-box {
+.upcoming-list {
+  padding: 0;
+  list-style: none;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .upcoming-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.upcoming-list-item {
   display: flex;
-  /* flex-wrap: wrap; */
-  /* align-content: space-between; */
-  margin: auto;
+  list-style: none;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .upcoming-list-item:not(:nth-child(2)) {
+    margin-right: 122px;
+  }
+  .upcoming-list-item:not(:nth-child(3)) {
+    margin-right: 107px;
+  }
 }
 
 .upcom-about-box {
@@ -84,22 +186,47 @@ img {
   margin-left: 57px;
 }
 
+@media screen and (min-width: 768px) {
+  .upcom-about-box-api {
+    margin-left: 0;
+  }
+}
+
 .upcom-release-date {
   font-family: 'Roboto';
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
+  margin-top: 0;
+  margin-bottom: 12px;
+  margin-left: 57px;
 
   color: #f87719;
 }
 
 .upcom-vote {
+  display: flex;
+  flex-wrap: wrap;
   font-family: 'Roboto';
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
+  margin-top: 0;
+  margin-bottom: 12px;
+  margin-left: 61;
 
   color: #111111;
+}
+
+.vote-span {
+  background-color: #ffffff;
+  padding: 1px 4px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.slash {
+  color: #f8f8f8;
 }
 
 .upcom-popularity {
@@ -107,6 +234,9 @@ img {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
+  margin-top: 0;
+  margin-bottom: 12px;
+  margin-left: 72px;
 
   color: #ffffff;
 }
@@ -116,6 +246,8 @@ img {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
+  margin-top: 0;
+  margin-left: 100px;
 
   color: #ffffff;
 }
@@ -124,7 +256,24 @@ img {
   font-family: 'Roboto';
   font-weight: 400;
   font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 0;
   line-height: 1.43;
-
+  margin-top: 16px;
+  margin-bottom: 20px;
   color: #f8f8f8;
+}
+
+.upcom-btn {
+  background-image: linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%);
+  border-radius: 74px;
+  text-align: center;
+  padding: 12px 24px;
+
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.17;
+
+  color: #111111;
 }
