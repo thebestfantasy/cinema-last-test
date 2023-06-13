@@ -8,7 +8,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: rgb(0, 0, 1);
-  color: #212121;
   line-height: 1.5;
 }
 
@@ -18,6 +17,7 @@ img {
 }
 
 .month {
+  color: #212121;
   max-width: 320px;
   padding-top: 32px;
   padding-left: 20px;
@@ -276,4 +276,57 @@ img {
   line-height: 1.17;
 
   color: #111111;
+}
+
+/*****************************************************/
+
+.aaa {
+  width: 100px;
+  background-color: wheat;
+}
+
+.library {
+  background-color: #f87719;
+}
+
+.library-container {
+  max-width: 224px;
+  height: 325px;
+}
+
+.library-container-img {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  width: 280px;
+  height: 406px;
+  background-size: cover;
+  background-position: center;
+}
+
+@media screen and (min-width: 768px) {
+  .library-container-img {
+    width: 224px;
+    height: 325px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .library-container-img {
+    width: 394px;
+    height: 574px;
+  }
+}
+
+.library-container-about {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.65;
+
+  color: #ffffff;
 }
