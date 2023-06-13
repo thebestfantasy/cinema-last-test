@@ -14,17 +14,19 @@ async function initUpcomingFetch() {
       genres[genre.id] = genre.name;
     });
 
+    const randomData = Math.random() * data.length; 
+
     upcomingBox.insertAdjacentHTML(
       'beforeend',
-      createUpcomingMarkup(data.results[0], genres)
+      createUpcomingMarkup(data.results[randomData], genres)
     );
 
     const button = document.querySelector('.upcom-btn');
 
     button.addEventListener('click', () => {
-      const movieId = button.dataset.movieId;
-      localStorage.setItem('movieId', movieId);
-      console.log('Movie ID added to localStorage:', movieId);
+      const movId = button.dataset.movieId;
+      localStorage.setItem('movieId', movId);
+      console.log('Movie ID added to localStorage:', movId);
     });
   } catch (err) {
     console.log(err);

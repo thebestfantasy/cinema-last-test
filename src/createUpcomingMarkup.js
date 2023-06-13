@@ -1,5 +1,5 @@
 export function createUpcomingMarkup(arr, genres) {
-  const {
+    const {
     release_date,
     vote_average,
     vote_count,
