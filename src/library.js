@@ -17,7 +17,7 @@ async function initLibraryFetch() {
     // });
 
     console.log(data);
-    libraryBox.insertAdjacentHTML('beforeend', createLibraryMarkup(data));
+    // libraryBox.insertAdjacentHTML('beforeend', createLibraryMarkup(data));
   } catch (err) {
     console.log(err);
   }
